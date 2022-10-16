@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}PCSHOP - процессоры{% endblock %}
+    <a href ="/">Вернуться на главную</a>
+{% block content %}
+    <table>
+        <tr>
+            <td>Выберите процессор, который хотите рассмотреть</td>
+        </tr>
+        {% for processor in processors%}
+        <tr>
+            <td><a href="/catalog_processors/{{ processor.id }}" >{{ processor.name }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}PCSHOP - видеокарты{% endblock %}
+    <a href ="/">Вернуться на главную</a>
+{% block content %}
+    <table>
+        <tr>
+            <td>Выберите видеокарту, которую хотите рассмотреть</td>
+        </tr>
+        {% for graphic_card in graphic_cards%}
+        <tr>
+            <td><a href="/catalog_graphic_cards/{{ graphic_card.id }}" >{{ graphic_card.name }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
